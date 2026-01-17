@@ -1,16 +1,16 @@
-package dev.hytalemodding;
+package com.marotodiego.hytale.homecrystal;
 
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import dev.hytalemodding.commands.ExampleCommand;
-import dev.hytalemodding.events.ExampleEvent;
+import com.marotodiego.hytale.homecrystal.commands.ExampleCommand;
+import com.marotodiego.hytale.homecrystal.events.ExampleEvent;
 
 import javax.annotation.Nonnull;
 
-public class ExamplePlugin extends JavaPlugin {
+public class HomeCrystalPlugin extends JavaPlugin {
 
-    public ExamplePlugin(@Nonnull JavaPluginInit init) {
+    public HomeCrystalPlugin(@Nonnull JavaPluginInit init) {
         super(init);
     }
 

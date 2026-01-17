@@ -1,5 +1,6 @@
-package dev.hytalemodding.commands;
+package com.marotodiego.hytale.homecrystal.commands;
 
+import com.hypixel.hytale.protocol.GameMode;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.AbstractCommand;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
@@ -12,6 +13,8 @@ public class ExampleCommand extends AbstractCommand {
 
     public ExampleCommand(String name, String description) {
         super(name, description);
+        setPermissionGroup(GameMode.Adventure);
+        setPermissionGroup(GameMode.Creative);
     }
 
     @Nullable
