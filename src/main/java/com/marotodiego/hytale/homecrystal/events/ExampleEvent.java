@@ -2,6 +2,7 @@ package com.marotodiego.hytale.homecrystal.events;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.ecs.BreakBlockEvent;
@@ -12,6 +13,7 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.marotodiego.hytale.homecrystal.store.PlayerStore;
 
 public class ExampleEvent {
+  public static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
   public static void onPlayerReady(PlayerReadyEvent event) {
     Player player = event.getPlayer();
@@ -30,9 +32,8 @@ public class ExampleEvent {
 
   public static void onPlayerDisconnect(PlayerDisconnectEvent event) {
     PlayerRef playerRef = event.getPlayerRef();
-    Player p = PlayerStore.get(playerRef.getUuid()).player();
-    p.sendMessage(Message.raw("BYE BYE"));
     PlayerStore.remove(playerRef.getUuid());
+    LOGGER.atInfo().log("Player " + playerRef.getUuid() + " disconnected");
   }
 
   public static void onBreakBlock(BreakBlockEvent event) {

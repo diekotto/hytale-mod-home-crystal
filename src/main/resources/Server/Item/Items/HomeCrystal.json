@@ -5,20 +5,37 @@
   },
   "Quality": "Common",
   "ItemLevel": 1,
-  "Categories": ["Items.Potions"],
+  "Categories": [
+    "Items.Potions"
+  ],
   "Id": "HomeCrystal",
-  "Icon": "Icons/ItemsGenerated/HomeCrystal_icon.png",
+  "Icon": "Icons/ItemsGenerated/HomeCrystal.png",
+  "Model": "Resources/HomeCrystal/model.blockymodel",
+  "Texture": "Resources/HomeCrystal/model_texture.png",
   "IconProperties": {
     "Scale": 0.75,
-    "Translation": [-13, -12],
-    "Rotation": [12.5, 12.5, 315]
+    "Translation": [
+      -13,
+      -12
+    ],
+    "Rotation": [
+      12.5,
+      12.5,
+      315
+    ]
   },
   "Consumable": true,
   "Interactions": {
     "Secondary": {
       "Interactions": [
         {
-          "Type": "interaction_home_crystal"
+          "Type": "Condition",
+          "RequiredGameMode": "Adventure",
+          "Crouching": false,
+          "Next": {
+            "Type": "interaction_home_crystal"
+          },
+          "Failed": "Block_Secondary"
         }
       ]
     }
@@ -35,7 +52,9 @@
       {
         "Id": "Workbench",
         "Type": "Crafting",
-        "Categories": ["Workbench_Survival"]
+        "Categories": [
+          "Workbench_Survival"
+        ]
       }
     ]
   },
@@ -52,7 +71,9 @@
   },
   "MaxStack": 10,
   "Tags": {
-    "Type": ["Potion"]
+    "Type": [
+      "Potion"
+    ]
   },
   "Light": {
     "Radius": 1,
