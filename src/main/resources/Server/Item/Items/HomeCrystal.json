@@ -5,11 +5,9 @@
   },
   "Quality": "Common",
   "ItemLevel": 1,
-  "Categories": ["Items.Consumables"],
+  "Categories": ["Items.Potions"],
   "Id": "HomeCrystal",
   "Icon": "Icons/ItemsGenerated/HomeCrystal_icon.png",
-  "Model": "Resources/HomeCrystal/HomeCrystal.blockymodel",
-  "Texture": "Resources/HomeCrystal/HomeCrystal.png",
   "IconProperties": {
     "Scale": 0.75,
     "Translation": [-13, -12],
@@ -54,7 +52,7 @@
   },
   "MaxStack": 10,
   "Tags": {
-    "Type": ["Consumable"]
+    "Type": ["Potion"]
   },
   "Light": {
     "Radius": 1,

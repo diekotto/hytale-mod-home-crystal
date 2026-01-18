@@ -19,9 +19,9 @@ ITEM_ID="$1"
 # Source directories
 BASE_DIR="$PROJECT_DIR/src/main/resources"
 ITEM_JSON="$BASE_DIR/Server/Item/Items/$ITEM_ID.json"
-ITEM_ICON="$BASE_DIR/Icons/ItemsGenerated/${ITEM_ID}_icon.png"
-ITEM_MODEL="$BASE_DIR/Resources/$ITEM_ID/model.blockymodel"
-ITEM_TEXTURE="$BASE_DIR/Resources/$ITEM_ID/model_texture.png"
+ITEM_ICON="$BASE_DIR/Common/Icons/ItemsGenerated/${ITEM_ID}_icon.png"
+ITEM_MODEL="$BASE_DIR/Common/Resources/$ITEM_ID/model.blockymodel"
+ITEM_TEXTURE="$BASE_DIR/Common/Resources/$ITEM_ID/model_texture.png"
 
 # Hytale Assets location
 HYTALE_DIR="$HOME/Library/Application Support/Hytale/install/release/package/game/latest"
@@ -49,17 +49,17 @@ unzip -q -o "$ASSETS_ZIP" -d "$ASSETS_FOLDER"
 
 # Create target directories
 mkdir -p "$ASSETS_FOLDER/Server/Item/Items"
-mkdir -p "$ASSETS_FOLDER/Icons/ItemsGenerated"
-mkdir -p "$ASSETS_FOLDER/Resources/$ITEM_ID"
+mkdir -p "$ASSETS_FOLDER/Common/Icons/ItemsGenerated"
+mkdir -p "$ASSETS_FOLDER/Common/Resources/$ITEM_ID"
 
 # Copy item files
 echo "Copying item files..."
 cp "$ITEM_JSON" "$ASSETS_FOLDER/Server/Item/Items/"
 
-[ -f "$ITEM_ICON" ] && cp "$ITEM_ICON" "$ASSETS_FOLDER/Icons/ItemsGenerated/"
-[ -f "$ITEM_MODEL" ] && cp "$ITEM_MODEL" "$ASSETS_FOLDER/Resources/$ITEM_ID/"
-[ -f "$ITEM_TEXTURE" ] && cp "$ITEM_TEXTURE" "$ASSETS_FOLDER/Resources/$ITEM_ID/"
-
+[ -f "$ITEM_ICON" ] && cp "$ITEM_ICON" "$ASSETS_FOLDER/Common/Icons/ItemsGenerated/"
+[ -f "$ITEM_MODEL" ] && cp "$ITEM_MODEL" "$ASSETS_FOLDER/Common/Resources/$ITEM_ID/"
+[ -f "$ITEM_TEXTURE" ] && cp "$ITEM_TEXTURE" "$ASSETS_FOLDER/Common/Resources/$ITEM_ID/"
+exit 1
 # Re-zip Assets
 echo "Re-creating Assets.zip..."
 cd "$ASSETS_FOLDER"

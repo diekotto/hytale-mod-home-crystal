@@ -19,8 +19,8 @@ ITEM_ID="$1"
 # Define directories
 BASE_DIR="$PROJECT_DIR/src/main/resources"
 ITEMS_DIR="$BASE_DIR/Server/Item/Items"
-ICONS_DIR="$BASE_DIR/Icons/ItemsGenerated"
-RESOURCES_DIR="$BASE_DIR/Resources/$ITEM_ID"
+ICONS_DIR="$BASE_DIR/Common/Icons/ItemsGenerated"
+RESOURCES_DIR="$BASE_DIR/Common/Resources/$ITEM_ID"
 
 # Create directories
 mkdir -p "$ITEMS_DIR"
