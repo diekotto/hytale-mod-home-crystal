@@ -11,17 +11,17 @@ import java.util.concurrent.CompletableFuture;
 
 public class ExampleCommand extends AbstractCommand {
 
-    public ExampleCommand(String name, String description) {
-        super(name, description);
-        setPermissionGroup(GameMode.Adventure);
-        setPermissionGroup(GameMode.Creative);
-    }
+  public ExampleCommand(String name, String description) {
+    super(name, description);
+    setPermissionGroup(GameMode.Adventure);
+    setPermissionGroup(GameMode.Creative);
+  }
 
-    @Nullable
-    @Override
-    protected CompletableFuture<Void> execute(@Nonnull CommandContext context) {
-        context.sendMessage(Message.raw("Hello from ExampleCommand!"));
-        return CompletableFuture.completedFuture(null);
-    }
+  @Nullable
+  @Override
+  protected CompletableFuture<Void> execute(@Nonnull CommandContext context) {
+    context.sendMessage(Message.raw("Hello from ExampleCommand!"));
+    return CompletableFuture.completedFuture(null);
+  }
 
 }

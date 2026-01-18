@@ -17,7 +17,13 @@
   },
   "Consumable": true,
   "Interactions": {
-    "Secondary": "Root_Secondary_Consume_Potion"
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "interaction_home_crystal"
+        }
+      ]
+    }
   },
   "Recipe": {
     "TimeSeconds": 3.5,
