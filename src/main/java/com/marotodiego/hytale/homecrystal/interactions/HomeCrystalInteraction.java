@@ -1,6 +1,7 @@
 package com.marotodiego.hytale.homecrystal.interactions;
 
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -43,6 +44,7 @@ public class HomeCrystalInteraction extends SimpleInstantInteraction {
     final Vector3d position = Player.getRespawnPosition(ref, world.getName(), store).getPosition();
     final Vector3f rotation = Player.getRespawnPosition(ref, world.getName(), store).getRotation();
     LOGGER.atInfo().log("All data before executing the command are ready");
-    store.addComponent(playerRef.getReference(), Teleport.getComponentType(), new Teleport(position, rotation));
+    final CommandBuffer<EntityStore> commandBuffer = interactionContext.getCommandBuffer();
+    commandBuffer.addComponent(playerRef.getReference(), Teleport.getComponentType(), new Teleport(position, rotation));
   }
 }
