@@ -1,0 +1,58 @@
+{
+  "TranslationProperties": {
+    "Name": "HomeCrystal",
+    "Description": "HomeCrystal Description"
+  },
+  "Quality": "Common",
+  "ItemLevel": 1,
+  "Categories": ["Items.Consumables"],
+  "Id": "HomeCrystal",
+  "Icon": "Icons/ItemsGenerated/HomeCrystal_icon.png",
+  "Model": "Resources/HomeCrystal/HomeCrystal.blockymodel",
+  "Texture": "Resources/HomeCrystal/HomeCrystal.png",
+  "IconProperties": {
+    "Scale": 0.75,
+    "Translation": [-13, -12],
+    "Rotation": [12.5, 12.5, 315]
+  },
+  "Consumable": true,
+  "Interactions": {
+    "Secondary": "Root_Secondary_Consume_Potion"
+  },
+  "Recipe": {
+    "TimeSeconds": 3.5,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": ["Workbench_Survival"]
+      }
+    ]
+  },
+  "PlayerAnimationsId": {
+    "Parent": "Item",
+    "Animations": {
+      "Consume": {
+        "FirstPerson": "Characters/Animations/Items/Main_Handed/Item/Attacks/Drink/Drink_FPS.blockyanim",
+        "ThirdPerson": "Characters/Animations/Items/Main_Handed/Item/Attacks/Drink/Drink.blockyanim",
+        "Speed": 1,
+        "Looping": true
+      }
+    }
+  },
+  "MaxStack": 10,
+  "Tags": {
+    "Type": ["Consumable"]
+  },
+  "Light": {
+    "Radius": 1,
+    "Color": "#141"
+  },
+  "DropOnDeath": true
+}
